@@ -52,7 +52,7 @@ def getNote(request, pk):
     serializer = NoteSerializer(note, many = False)
     return Response(serializer.data)
 
-@api_view(['POST'])
+@api_view(['PUT', 'POST'])
 def createNote(request):
     data = request.data
 
